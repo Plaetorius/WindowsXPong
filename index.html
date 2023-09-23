@@ -7,20 +7,46 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+		<div id="pongWindow" class="window-pong">
+			<div class="window-pong-titlebar">
+				Pong
+				<button class="window-pong-close" onclick="closePong()">x</button>
+			</div>
+		</div>
+		<div id="friendsWindow" class="window-friends">
+			<div class="window-friends-titlebar">
+				Friends
+				<button class="window-friends-close" onclick="closeFriends()">x</button>
+			</div>
+		</div>
 		<div class="xp-taskbar">
-			<div class="start-button">
-				<img src="images/logos/windowsXpSmallLogo.png" class="windowsxp-small-logo"></img>
+			<div id="start-button" class="start-button" onclick="start_button()">
+				<img src="images/logos/windowsXp.png" class="windowsxp-small-logo"></img>
 				start
 			</div>
 			<div class="programs">
-				<a href="#">Program 1</a>
-				<a href="#">Program 2</a>
-				<a href="#">Program 3</a>
+				<button class="program" id="openPong" onclick="pong_button()">
+					<img src="images/logos/pong.png" class="programs-logos"></img>
+					<a href="#">Pong</a>
+				</button>
+				<button class="program" id="openFriends" onclick="friends_button()">
+					<img src="images/logos/friends.png" class="programs-logos"></img>
+					<a href="#">Friends</a>
+				</button>
+				<button class="program">
+					<img src="images/logos/message.png" class="programs-logos"></img>
+					<a href="#">Messages</a>
+				</button>
+				<button class="program">
+					<img src="images/logos/pinball.png" class="programs-logos"></img>
+					<a href="#">Pinball</a>
+				</button>
 			</div>
 			<div class="system-tray">
 				<span class="time">12:00 PM</span>
 			</div>
 		</div>
+		<script src="script.js"></script>
 		
 	</body>
 </html>

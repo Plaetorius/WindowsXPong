@@ -6,14 +6,14 @@ body, html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+	overflow: hidden;
 }
 
 .windowsxp-small-logo {
-	height: 20px; /* Adjust based on your desired size */
-    width: 20px; /* Adjust based on your desired size */
+	height: 20px; 
+    width: 20px; 
     vertical-align: middle;
-    margin-right: 5px; /* Some spacing between the logo and the text */
-
+    margin-right: 5px; 
 }
 
 .xp-taskbar {
@@ -49,38 +49,93 @@ body, html {
         -1px 1px 0 hsl(0, 0%, 30%),
         1px 1px 0 hsl(0, 0%, 30%);
     cursor: pointer;
+	width: 100px;
 }
 
 .start-button::before {
     content: "";
     position: absolute;
-    /* top: 0; */
     right: 0;
-    /* bottom: 0; */
     left: 0;
     background-image: radial-gradient(circle at center, transparent, black 100%, black 10%);
-    opacity: 0.5; /* Adjust opacity to your liking for the strength of the vignette effect */
-    pointer-events: none; /* Ensures the pseudo-element doesn't interfere with button interactions */
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.start-button-pressed {
+    position: relative;
+    overflow: hidden;
+    background-color: #1d8f1990;
+    padding: 5px;
+    color: white;
+    border: 1px outset #1d8f1990;
+	padding-right: 20px;
+	border-top-right-radius: 20%;
+	border-bottom-right-radius: 30%;
+    font-weight: bold;
+	font-style: italic;
+    text-shadow:
+		0px 0px 50px white,
+        -1px -1px 0 hsl(0, 0%, 30%),  
+        1px -1px 0 hsl(0, 0%, 30%),
+        -1px 1px 0 hsl(0, 0%, 30%),
+        1px 1px 0 hsl(0, 0%, 30%);
+    cursor: pointer;
+	width: 100px;
+}
+
+.start-button-pressed::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-image: radial-gradient(circle at center, transparent, black 100%, black 10%);
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 .programs {
     flex: 1;
     display: flex;
-    gap: 5px;
+    gap: 1px;
+	margin-left: 30px;
 }
 
 .programs a {
-    padding: 5px 10px;
+    font-family: Tahoma, Arial, sans-serif;
+	text-decoration: none;
+	color: white;
+}
+
+.programs button {
+	padding: 5px 10px;
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
     text-decoration: none;
     border: 1px solid transparent;
     border-radius: 2px;
+	width: 200px;
+	height: 30px;
+	text-align: left;
 }
 
-.programs a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+.programs button:hover {
+    background-color: #235edc;
 }
+
+.programs-logos {
+	height: 20px; 
+    width: 20px; 
+    vertical-align: middle;
+    margin-right: 5px; 
+}
+
+.programs .program-pressed {
+    background-color: #235edc;
+	border: 2px solid #0d3488;
+	border-radius: 5px;
+}
+
 
 .system-tray {
     display: flex;
@@ -92,4 +147,72 @@ body, html {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 2px 5px;
     border-radius: 2px;
+}
+
+.window-pong {
+    display: none;
+    position: fixed;
+    top: 50px; /* adjust as necessary */
+    left: 50px; /* adjust as necessary */
+    width: 300px; /* adjust as necessary */
+    height: 400px; /* adjust as necessary */
+    background-color: rgb(197, 197, 197);
+    border: 1px solid #4A8DFB;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.window-pong-titlebar {
+    background-color: #235edc;
+    padding: 5px;
+    cursor: move;
+    display: flex;
+	color: white;
+    justify-content: space-between;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.window-pong-close {
+    background-color: red;
+	border-radius: 3px;
+	vertical-align: middle;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.window-friends {
+    display: none;
+    position: fixed;
+    top: 50px; /* adjust as necessary */
+    left: 50px; /* adjust as necessary */
+    width: 300px; /* adjust as necessary */
+    height: 400px; /* adjust as necessary */
+    background-color: rgb(197, 197, 197);
+    border: 1px solid #4A8DFB;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.window-friends-titlebar {
+    background-color: #235edc;
+    padding: 5px;
+    cursor: move;
+    display: flex;
+	color: white;
+    justify-content: space-between;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.window-friends-close {
+    background-color: red;
+	border-radius: 3px;
+	vertical-align: middle;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
