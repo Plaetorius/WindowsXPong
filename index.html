@@ -7,16 +7,30 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<div id="pongWindow" class="window-pong">
-			<div class="window-pong-titlebar">
-				Pong
-				<button class="window-pong-close" onclick="closePong()">x</button>
+		<div class="windows">
+			<div id="pongWindow" class="window-pong">
+				<div class="window-pong-titlebar">
+					Pong
+					<button class="window-pong-close" onclick="closePong()">x</button>
+				</div>
 			</div>
-		</div>
-		<div id="friendsWindow" class="window-friends">
-			<div class="window-friends-titlebar">
-				Friends
-				<button class="window-friends-close" onclick="closeFriends()">x</button>
+			<div id="friendsWindow" class="window-friends">
+				<div class="window-friends-titlebar">
+					Friends
+					<button class="window-friends-close" onclick="closeFriends()">x</button>
+				</div>
+			</div>
+			<div id="messagesWindow" class="window-messages">
+				<div class="window-messages-titlebar">
+					Messages
+					<button class="window-messages-close" onclick="closeMessages()">x</button>
+				</div>
+			</div>
+			<div id="pinballWindow" class="window-pinball">
+				<div class="window-pinball-titlebar">
+					Pinball
+					<button class="window-pinball-close" onclick="closePinball()">x</button>
+				</div>
 			</div>
 		</div>
 		<div class="xp-taskbar">
@@ -33,11 +47,11 @@
 					<img src="images/logos/friends.png" class="programs-logos"></img>
 					<a href="#">Friends</a>
 				</button>
-				<button class="program">
+				<button class="program" id="openMessages" onclick="messages_button()">
 					<img src="images/logos/message.png" class="programs-logos"></img>
 					<a href="#">Messages</a>
 				</button>
-				<button class="program">
+				<button class="program" id="openPinball" onclick="pinball_button()">
 					<img src="images/logos/pinball.png" class="programs-logos"></img>
 					<a href="#">Pinball</a>
 				</button>

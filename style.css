@@ -216,3 +216,71 @@ body, html {
     border: none;
     cursor: pointer;
 }
+
+.window-messages {
+    display: none;
+    position: fixed;
+    top: 50px; /* adjust as necessary */
+    left: 50px; /* adjust as necessary */
+    width: 300px; /* adjust as necessary */
+    height: 400px; /* adjust as necessary */
+    background-color: rgb(197, 197, 197);
+    border: 1px solid #4A8DFB;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.window-messages-titlebar {
+    background-color: #235edc;
+    padding: 5px;
+    cursor: move;
+    display: flex;
+	color: white;
+    justify-content: space-between;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.window-messages-close {
+    background-color: red;
+	border-radius: 3px;
+	vertical-align: middle;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.window-pinball {
+    display: none;
+    position: fixed;
+    top: 50px; /* adjust as necessary */
+    left: 50px; /* adjust as necessary */
+    width: 300px; /* adjust as necessary */
+    height: 400px; /* adjust as necessary */
+    background-color: rgb(197, 197, 197);
+    border: 1px solid #4A8DFB;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.window-pinball-titlebar {
+    background-color: #235edc;
+    padding: 5px;
+    cursor: move;
+    display: flex;
+	color: white;
+    justify-content: space-between;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.window-pinball-close {
+    background-color: red;
+	border-radius: 3px;
+	vertical-align: middle;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
