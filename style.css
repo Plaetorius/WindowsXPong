@@ -157,10 +157,11 @@ body, html {
     width: 300px; /* adjust as necessary */
     height: 400px; /* adjust as necessary */
     background-color: rgb(197, 197, 197);
-    border: 1px solid #4A8DFB;
+    border: 5px solid #1b49ab;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+
 }
 
 .window-pong-titlebar {
@@ -181,6 +182,16 @@ body, html {
     color: #fff;
     border: none;
     cursor: pointer;
+	border: 1px solid white;
+	border-radius: 5px;
+	font-style: bold;
+	width: 25px;
+	height: 25px;
+}
+
+.window-pong-close:active {
+    background-color: blue;
+
 }
 
 .window-friends {
